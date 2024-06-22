@@ -1,0 +1,57 @@
+# Package Overview
+package_name: bikeshare_model
+
+# Data Files
+training_data_file: bike-rental-dataset.csv
+
+# Variables
+target: cnt
+
+pipeline_name: bikeshare_model
+pipeline_save_file: bikeshare_model_output_v
+
+features:
+  - season
+  - yr
+  - mnth
+  - hr
+  - holiday
+  - weekday
+  - workingday
+  - weathersit
+  - temp
+  - atemp
+  - hum
+  - windspeed
+
+unused_fields:
+  - dteday
+  - casual
+  - registered
+
+# Features processing
+categorical_features:
+  - season
+  - yr
+  - mnth
+  - hr
+  - holiday
+  - weekday
+  - workingday
+  - weathersit
+
+numerical_features:
+  - temp
+  - atemp
+  - hum
+  - windspeed
+
+# set train/test split
+test_size: 0.20
+
+# to set the random seed
+random_state: 42
+
+# algorithm parameters
+n_estimators: 100
+max_depth: 10

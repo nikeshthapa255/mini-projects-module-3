@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+joblib
+pydantic
+strictyaml
+ruamel.yaml
+seaborn
+matplotlib
