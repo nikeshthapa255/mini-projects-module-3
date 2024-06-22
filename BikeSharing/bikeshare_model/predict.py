@@ -1,3 +1,11 @@
+import sys
+from pathlib import Path
+
+# Set the path to the root of your project
+file = Path(__file__).resolve()
+parent, root = file.parent, file.parents[1]
+sys.path.append(str(root))
+
 import typing as t
 
 import pandas as pd
