@@ -28,7 +28,7 @@ def make_prediction(*, input_data: t.Union[pd.DataFrame, dict]) -> dict:
     if not errors:
         predictions = _bikeshare_pipe.predict(validated_data[config.model.features])
         results = {
-            "predictions": [pred for pred in predictions],
+            "predictions": predictions,
             "version": _version,
             "errors": errors,
         }
